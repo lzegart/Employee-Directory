@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from "react";
 import API from "../utils/API";
+import Employee from "../components/Employee";
+import SearchEmp from "../components/SearchEmployee";
 
 
 
 function EmployeeDirectory() {
-    const [state, setState] = useState({})
+    const [state, setState] = useState({ users: null })
     useEffect( () => {
         console.log("hello")
         API.getRandomUsers()
@@ -17,12 +19,16 @@ function EmployeeDirectory() {
             })
 
     }, [])
+
     return (
         <div>
             EmployeeDirectory
-
-
+                <SearchEmp></SearchEmp>
+            {state.users.forEach(user => {
+                <Employee user={user}></Employee>
+            })}
         </div>
+        
     )
 }
 
