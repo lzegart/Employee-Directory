@@ -5,12 +5,15 @@ body {
 .empRow { 
     display: flex;
     flex-direction: row;
+    border: 1px solid;
+    margin-bottom: -1px;
 }
 
 .image {
     width: 50px;
     height: 50px;
     /* flex-grow: 1; */
+    padding: 10px;
 }
 
 .name {
