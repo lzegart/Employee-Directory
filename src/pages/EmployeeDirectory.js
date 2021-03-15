@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import API from "../utils/API";
 import Employee from "../components/Employee";
-import SearchEmp from "../components/SearchEmployee";
 import moment from "moment";
 
 
@@ -26,26 +25,24 @@ function EmployeeDirectory() {
             const nextDOB = moment(next.dob.date);
             return nextDOB.diff(currentDOB)
         })
-    setState(
-        {
-            ...state,
-            filterUsers: sortedUsers
-        }
-    )
+        setState(
+            {
+                ...state,
+                filterUsers: sortedUsers
+            }
+        )
     }
     function sortByFirstName() {    
-            const sortedUsers = state.users.sort((current, next) => {
-                console.log(current, next)
-                if (current.name.first < next.name.first) {
-                    return -1
-                } else if (current.name.first > next.name.first) {
-                    return 1
-                } else {
-                    return 0
-                }
-            })
-        
-        
+        const sortedUsers = state.users.sort((current, next) => {
+            console.log(current, next)
+            if (current.name.first < next.name.first) {
+                return -1
+            } else if (current.name.first > next.name.first) {
+                return 1
+            } else {
+                return 0
+            }
+        })
         setState(
             {
                 ...state,
@@ -56,22 +53,21 @@ function EmployeeDirectory() {
     function filterName(event) {
         console.log(event.target.value)
         const filteredUsers = state.users.filter((user) => {
-            const userFullName = user.name.first + " " + user.name.last
+        const userFullName = user.name.first + " " + user.name.last
             return userFullName.toLowerCase().includes(event.target.value.toLowerCase())
-        
-        
         })
         setState(
-        {
-            ...state,
-            filterUsers: filteredUsers
-        }
+            {
+                ...state,
+                filterUsers: filteredUsers
+            }
     )}
 
     return (
         <div>
             <p id="title">EmployeeDirectory</p>
-            <div class="filters">
+            <div className="filters">
+                <p>Please search employees by name, or use the sort buttons for ordered information.</p>
                 <input onChange={filterName}></input>
                 <button onClick={sortByFirstName}>Sort by First Name</button>
                 <button onClick={sortByDOB}>Sort by Date of Birth</button>

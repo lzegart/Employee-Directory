@@ -1,5 +1,5 @@
 import React from "react";
-import EmployeeDirectory from "../pages/EmployeeDirectory";
+// import EmployeeDirectory from "../pages/EmployeeDirectory";
 import "./Employee.css";
 import moment from "moment";
 
