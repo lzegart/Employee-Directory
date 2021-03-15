@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(161, 187, 178);
+}
+
+.empRow { 
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    width: 50px;
+    height: 50px;
+    /* flex-grow: 1; */
+}
+
+.name {
+    width: 20vw;
+    
+}
+
+.email {
+    width: 20vw;
+}
+
+.phone {
+    width: 20vw;
+}
+
+.birthday {
+    width: 20vw;
+}
