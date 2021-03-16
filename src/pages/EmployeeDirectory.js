@@ -65,7 +65,7 @@ function EmployeeDirectory() {
 
     return (
         <div>
-            <p id="title">EmployeeDirectory</p>
+            <p id="title">Employee Directory</p>
             <div className="filters">
                 <p>Please search employees by name, or use the sort buttons for ordered information.</p>
                 <input onChange={filterName}></input>
