@@ -2,6 +2,7 @@
   "name": "employee-directory",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lzegart.github.io/Employee-Directory/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -20,8 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
-    "homepage": "https://lzegart.github.io/Employee-Directory/"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": [
